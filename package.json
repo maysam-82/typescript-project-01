@@ -1,0 +1,26 @@
+{
+	"name": "typescript-project-01",
+	"version": "1.0.0",
+	"description": "- create two folders named `build` and `src` inside main project folder. - In `src` folder create index.ts file. - In command line enter `tsc --init` to generate `tsconfig.json` file.",
+	"main": "index.js",
+	"scripts": {
+		"start:build": "tsc -w",
+		"start:run": "nodemon build/index.js",
+		"start": "concurrently npm:start:*"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/maysam-82/typescript-project-01.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/maysam-82/typescript-project-01/issues"
+	},
+	"homepage": "https://github.com/maysam-82/typescript-project-01#readme",
+	"dependencies": {
+		"concurrently": "^5.2.0",
+		"nodemon": "^2.0.3"
+	}
+}
