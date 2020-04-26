@@ -37,3 +37,39 @@ In this project we will write a sorting logic one time to sort all different kin
   ```
 
 - Enter `npm start`
+
+## Type Guards
+
+In TypeScript we use Type Gaurd when we are going to restore access to one of the specific types which we are dealing with inside a union operator.
+For primitive values (number, string, boolean, symbol) we use `typeof` as a Type Guard otherwise we use `instanceof` a constructor function of type that we are going to check for as written in the following code:
+
+```typescript
+class Sorter {
+	constructor(public collection: number[] | string) {}
+	public sort(): void {
+		const { length } = this.collection;
+		for (let i = 0; i < length; i++) {
+			for (let j = 0; j < length - i - 1; j++) {
+        // All of this only works if collection is number[]
+        // If collection is an array of numbers
+        // Using Type Guard
+        if(this.collection instanceOf Array){
+          // type of collection is number[]
+          if (this.collection[j] > this.collection[j + 1]) {
+            const leftHand = this.collection[j];
+            this.collection[j] = this.collection[j + 1];
+            this.collection[j + 1] = leftHand;
+          }
+        }
+
+        // Only going to work if collection is string
+        // Add Type Guard with different feature
+        if {typeof this.collection === 'string'} {
+
+        }
+			}
+		}
+	}
+}
+
+```
