@@ -1,7 +1,12 @@
-import { NumbersCollection } from './NumbersCollection';
+// Defining interface here means defining some instructions on top of the Sorter class that say if you just give use the length property, compare and swap methods, you can use this class to sort your data regardless of what data structure is.
+interface ISorter {
+	length: number;
+	compare(leftIndex: number, rightIndex: number): boolean;
+	swap(leftIndex: number, rightIndex: number): void;
+}
 export class Sorter {
 	//  collection instance property is going to be an instance of NumbersCollections.
-	constructor(public collection: NumbersCollection) {}
+	constructor(public collection: ISorter) {}
 	public sort(): void {
 		const { length } = this.collection;
 		for (let i = 0; i < length; i++) {
