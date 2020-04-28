@@ -1,5 +1,9 @@
-export class StringCollection {
-	constructor(public characters: string) {}
+import { Sorter } from './Sorter';
+
+export class StringCollection extends Sorter {
+	constructor(public characters: string) {
+		super();
+	}
 	public get length(): number {
 		return this.characters.length;
 	}

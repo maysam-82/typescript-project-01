@@ -5,16 +5,16 @@ import { LinkedList } from './Classes/LinkedList';
 const numbersCollection = new NumbersCollection([10, -6, -3, 0, 6, 45]);
 const stringCollection = new StringCollection('xZQblaP');
 const linkedList = new LinkedList();
-// const sorter = new Sorter(numbersCollection);
-// sorter.sort();
-// const sorter = new Sorter(stringCollection);
-// sorter.sort();
+// numbersCollection.sort();
+// console.log(numbersCollection.data);
+// stringCollection.sort();
+// console.log(stringCollection.characters);
 linkedList.addNode(500);
-linkedList.addNode(-50);
+linkedList.addNode(-10);
+linkedList.addNode(-5);
+linkedList.addNode(6);
 linkedList.addNode(0);
-linkedList.addNode(150);
-linkedList.addNode(-50);
 
-const sorter = new Sorter(linkedList);
-sorter.sort();
+linkedList.sort();
+
 linkedList.print();

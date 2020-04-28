@@ -1,3 +1,5 @@
+import { Sorter } from './Sorter';
+
 //  LinkedList is arrays of nodes which contain a value (number) and a reference of next node inside a chain of nodes.
 // Here we have two classes. One is Node and another one is LinkedList.
 class NodeItem {
@@ -6,7 +8,8 @@ class NodeItem {
 	constructor(public data: number) {}
 }
 
-export class LinkedList {
+export class LinkedList extends Sorter {
+	// if we do not have any constructor for a class here, there is no need to call `super()`. Sorter's constructor will be automatically called for us.
 	headOfList: NodeItem | null = null;
 	public addNode(value: number): void {
 		const nodeItem = new NodeItem(value);

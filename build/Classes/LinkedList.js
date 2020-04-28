@@ -1,5 +1,19 @@
 "use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 Object.defineProperty(exports, "__esModule", { value: true });
+var Sorter_1 = require("./Sorter");
 //  LinkedList is arrays of nodes which contain a value (number) and a reference of next node inside a chain of nodes.
 // Here we have two classes. One is Node and another one is LinkedList.
 var NodeItem = /** @class */ (function () {
@@ -10,9 +24,13 @@ var NodeItem = /** @class */ (function () {
     }
     return NodeItem;
 }());
-var LinkedList = /** @class */ (function () {
+var LinkedList = /** @class */ (function (_super) {
+    __extends(LinkedList, _super);
     function LinkedList() {
-        this.headOfList = null;
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        // if we do not have any constructor for a class here, there is no need to call `super()`. Sorter's constructor will be automatically called for us.
+        _this.headOfList = null;
+        return _this;
     }
     LinkedList.prototype.addNode = function (value) {
         var nodeItem = new NodeItem(value);
@@ -79,5 +97,5 @@ var LinkedList = /** @class */ (function () {
         }
     };
     return LinkedList;
-}());
+}(Sorter_1.Sorter));
 exports.LinkedList = LinkedList;
