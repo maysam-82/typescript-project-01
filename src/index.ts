@@ -1,11 +1,20 @@
 import { NumbersCollection } from './Classes/NumbersCollection';
 import { Sorter } from './Classes/Sorter';
 import { StringCollection } from './Classes/StringCollection';
+import { LinkedList } from './Classes/LinkedList';
 const numbersCollection = new NumbersCollection([10, -6, -3, 0, 6, 45]);
 const stringCollection = new StringCollection('xZQblaP');
+const linkedList = new LinkedList();
 // const sorter = new Sorter(numbersCollection);
 // sorter.sort();
-const sorter = new Sorter(stringCollection);
-sorter.sort();
+// const sorter = new Sorter(stringCollection);
+// sorter.sort();
+linkedList.addNode(500);
+linkedList.addNode(-50);
+linkedList.addNode(0);
+linkedList.addNode(150);
+linkedList.addNode(-50);
 
-console.log(sorter.collection);
+const sorter = new Sorter(linkedList);
+sorter.sort();
+linkedList.print();
