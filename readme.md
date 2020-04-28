@@ -98,3 +98,19 @@ export abstract class Sorter {
 	}
 }
 ```
+
+## Interfaces Vs Inheritance/Abstract Classes:
+
+- Both set up to contract between different classes.
+
+### Interfaces:
+
+- Use when we have different objects that we are going to work together
+- Promotes loose coupling
+
+### Abstract Classes:
+
+- Use when we are going to build a definition of an object
+- Strongly couples classes together.
+
+In generic, the first priority for use is Interfaces and then Abstract classes.
